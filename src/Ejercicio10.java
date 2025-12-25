@@ -12,29 +12,23 @@ mismo, salvo aquellos que están en las aristas (que serán siempre de valor 1).
 
 public class Ejercicio10 {
   public static void main(String[] args) {
-    int[][] n = new int[6][6];
+    int[][] tartaglia = new int[6][6];
 
-    for (int i = 0; i < n.length; i++) {
-
+    for (int i = 0; i < 6; i++) {
       for (int j = 0; j <= i; j++) {
-        if (j == 0 || j == i) {
-          n[i][j] = 1;
+        if (i == 0 || j == i) {
+          tartaglia[i][j] = 1;
         } else {
-          n[i][j] = n[i - 1][j - 1] + n[i - 1][j];
+          tartaglia[i][j] += tartaglia[i - 1][j] + tartaglia[i - 1][j];
         }
       }
-
     }
-
-    for (int i = 0; i < n.length; i++) {
-      for (int s = 0; s < n.length - 1; s++) {
-        System.out.print(" ");
-        for (int j = 0; j < i; j++) {
-          System.out.print(n[i][j] + " ");
-        }
-
+    for (int i = 0; i < tartaglia.length; i++) {
+      for (int j = 0; j < i; j++) {
+        System.out.print(tartaglia[i][j] + " ");
       }
       System.out.println();
     }
+
   }
 }
