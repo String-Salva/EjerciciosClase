@@ -18,7 +18,7 @@ public class Ejercicio4practica {
     Scanner sc = new Scanner(System.in);
     System.out.println("Introduce un número para utilizarlo de tamaño en el array");
     int N = sc.nextInt();
-
+     sc.close();
     int[] arrayPrimos = new int[N];
 
     int contadorPrimos = 0;
