@@ -69,7 +69,7 @@ public class ArrayList4 {
     } while (temperatura != -999.0);
 
     for (int i = 0; i < temperaturas.size(); i++) {
-      if (temperaturas.get((i)) == temperaturas.get((temperaturas.size()))) {
+      if (temperaturas.get((i)) == temperaturas.get((temperaturas.size() - 1))) {
         System.out.print(i);
       } else {
         System.out.print(i + ",");
@@ -146,10 +146,10 @@ public class ArrayList4 {
     Collections.sort(sinDuplicados, Collections.reverseOrder());
     String resultado = "";
     for (int i = 0; i < sinDuplicados.size(); i++) {
-      if (sinDuplicados.get(i) == sinDuplicados.get(sinDuplicados.size())) {
+      if (sinDuplicados.get(i) == sinDuplicados.get(sinDuplicados.size() - 1)) {
         resultado += sinDuplicados.get(i);
       } else {
-        resultado += sinDuplicados.get(i) + ",";
+        resultado += sinDuplicados.get(i) + ", ";
       }
     }
     resultado = "[" + resultado + "]";
@@ -162,7 +162,7 @@ public class ArrayList4 {
     System.out.println("Por encima de la media hay " + mayorQueMedia + " temperaturas");
     System.out.println("Por debajo de la media hay " + menorQueMedia + " temperaturas");
     System.out.println("Hay " + repetidas + " temperaturas repetidas");
-    System.out.print("La lista sin duplicados de mayor a menor --> " + resultado);
+    System.out.println("La lista sin duplicados de mayor a menor --> " + resultado);
 
     // Declaro una nueva variable para que el usuario introduzca un valor a buscar
     // en la lista
