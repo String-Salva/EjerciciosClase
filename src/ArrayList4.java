@@ -184,6 +184,11 @@ public class ArrayList4 {
         temperaturaUser[i] = temperaturas.get(i);
       }
     }
+    if (contador > 0) {
+      System.out.println("La temperatura que preguntas SÍ está, ha sido introducida en " + temperaturaUser.length + " ocasiones");
+    } else {
+      System.out.println("La temperatura por la que preguntas no aparece en la base de datos");
+    }
 
   }
 }
