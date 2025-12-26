@@ -40,6 +40,8 @@ Si no existe:
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class ArrayList4 {
   public static void main(String[] args) {
@@ -50,6 +52,8 @@ public class ArrayList4 {
     ArrayList<Double> temperaturas = new ArrayList<>();
     double temperatura;
     double suma = 0;
+    double maxima;
+    double minima;
 
     // Hago el bucle para preguntar al usuario las temperaturas y decirle como parar
     // cuando termine
@@ -69,15 +73,77 @@ public class ArrayList4 {
         System.out.print(i + ",");
       }
     }
+
+    // Ahora vamos a calcular la suma de las temperaturas para ayudarnos a calcular
+    // la media, y
+    // aprovecharemos el bucle para sacar también la máxima y la mínima
+
+    minima = temperaturas.get(0);
+    maxima = temperaturas.get(0);
+
     for (int i = 0; i < temperaturas.size(); i++) {
       suma += temperaturas.get(i);
+      if (temperaturas.get(i) > maxima) {
+        maxima = temperaturas.get(i);
+      }
+      if (temperaturas.get(i) < minima) {
+        minima = temperaturas.get(i);
+      }
     }
 
     double media = suma / (double) temperaturas.size();
 
+    // Voy a crear un método booleano para determinar cuántas temperaturas se
+    // repiten y voy a declarar un contador para contarlas
+
+    int repetidas = 0;
+
+    for (int i = 0; i < temperaturas.size(); i++) {
+      for (int j = 1; j < temperaturas.size(); j++) {
+        if (temperaturas.get(i) == temperaturas.get(j)) {
+          repetidas++;
+        }
+      }
+    }
+
+    // Para contar cuantas temperaturas están por encima de la media voy a crear dos
+    // variables para contabilizar y voy a hacer un bucle para contarlas
+    int mayorQueMedia = 0;
+    int menorQueMedia = 0;
+
+    for (int i = 0; i < temperaturas.size(); i++) {
+      if (temperaturas.get(i) > media) {
+        mayorQueMedia++;
+        ;
+      }
+      if (temperaturas.get(i) < media) {
+        menorQueMedia++;
+      }
+    }
+
+    // Creo una nueva lista ordenada de mayor a menor, para esto, voy a crear un
+    // array y lo voy a ordenar
+
+    double[] orderedArray = new double[temperaturas.size()];
+    for (int i = 0; i < temperaturas.size(); i++) {
+      orderedArray[i] = temperaturas.get(i);
+    }
+    Arrays.sort(orderedArray);
+
+    // O bien ordeno la lista con el método de la clase Collections
+
+    ArrayList<Double> orderedArrayList = new ArrayList<>(temperaturas);
+    Collections.sort(orderedArrayList);
+
+    // Imprimimos por pantalla los datos requeridos
+
     System.out.println("\nCantidad total de temperaturas -> " + temperaturas.size());
     System.out.println("Temperatura media -> " + media);
-    System.out.println("Temperatura más alta -> "+ temperaturas.);
+    System.out.println("Temperatura más alta -> " + maxima + "grados, y la más baja -> " + minima + " grados");
+    System.out.println("Por encima de la media hay " + mayorQueMedia + " temperaturas");
+    System.out.println("Por debajo de la media hay " + menorQueMedia + " temperaturas");
+    System.out.println("Hay " + repetidas + " temperaturas repetidas");
+    System.out.println();
 
   }
 }
