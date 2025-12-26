@@ -42,6 +42,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Set;
+import java.util.HashSet;
 
 public class ArrayList4 {
   public static void main(String[] args) {
@@ -135,6 +137,23 @@ public class ArrayList4 {
     ArrayList<Double> orderedArrayList = new ArrayList<>(temperaturas);
     Collections.sort(orderedArrayList);
 
+    // Creo una nueva lista sin duplicados
+
+    Set<Double> eliminarduplicados = new HashSet<>(orderedArrayList);
+    ArrayList<Double> sinDuplicados = new ArrayList<>(eliminarduplicados);
+
+    // Ordeno la lista sin duplicados y creo un String para mostrarlo fácil luego
+    Collections.sort(sinDuplicados, Collections.reverseOrder());
+    String resultado = "";
+    for (int i = 0; i < sinDuplicados.size(); i++) {
+      if (sinDuplicados.get(i) == sinDuplicados.get(sinDuplicados.size())) {
+        resultado += sinDuplicados.get(i);
+      } else {
+        resultado += sinDuplicados.get(i) + ",";
+      }
+    }
+    resultado = "[" + resultado + "]";
+
     // Imprimimos por pantalla los datos requeridos
 
     System.out.println("\nCantidad total de temperaturas -> " + temperaturas.size());
@@ -143,7 +162,28 @@ public class ArrayList4 {
     System.out.println("Por encima de la media hay " + mayorQueMedia + " temperaturas");
     System.out.println("Por debajo de la media hay " + menorQueMedia + " temperaturas");
     System.out.println("Hay " + repetidas + " temperaturas repetidas");
-    System.out.println();
+    System.out.print("La lista sin duplicados de mayor a menor --> " + resultado);
+
+    // Declaro una nueva variable para que el usuario introduzca un valor a buscar
+    // en la lista
+    int contador = 0;
+    double userValue;
+
+    System.out.println("Introduce una temperatura a comprobar, te diré si existe o no");
+    userValue = sc.nextDouble();
+    sc.close();
+
+    for (int i = 0; i < temperaturas.size(); i++) {
+      if (temperaturas.get(i) == userValue) {
+        contador++;
+      }
+    }
+    double[] temperaturaUser = new double[contador];
+    for (int i = 0; i < temperaturaUser.length; i++) {
+      if (temperaturas.get(i) == userValue) {
+        temperaturaUser[i] = temperaturas.get(i);
+      }
+    }
 
   }
 }
