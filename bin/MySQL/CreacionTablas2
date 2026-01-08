@@ -1,0 +1,57 @@
+CREATE DATABASE NOTAS;
+
+USE NOTAS;
+
+CREATE TABLE ALUMNOS (
+DNI VARCHAR(9) PRIMARY KEY,
+NOMBRE VARCHAR(15) NOT NULL,
+APELLIDO VARCHAR(15) NOT NULL,
+FECHA_NAC DATE,
+GENERO ENUM("MASCULINO","FEMENINO","OTROS")
+);
+
+CREATE TABLE ASIGNATURAS (
+ID DECIMAL (1,0) PRIMARY KEY,
+NOMBRE VARCHAR(15),
+GRADO VARCHAR(6),
+CURSO ENUM('1','2') NOT NULL
+);
+
+CREATE TABLE NOTAS (
+COD INT AUTO_INCREMENT PRIMARY KEY,
+NOTA DECIMAL(3,2),
+PROFESOR VARCHAR(20)
+);
+
+ALTER TABLE NOTAS ADD COLUMN ID_ALUMNO VARCHAR(9);
+ALTER TABLE NOTAS ADD CONSTRAINT FK_ALUMNO FOREIGN KEY (ID_ALUMNO) REFERENCES ALUMNOS(DNI);
+
+ALTER TABLE NOTAS ADD COLUMN ID_ASIGNATURAS DECIMAL(1,0);
+ALTER TABLE NOTAS ADD CONSTRAINT FK_ID_ASIGNATURAS FOREIGN KEY (ID_ASIGNATURAS) REFERENCES ASIGNATURAS(ID);
+
+insert into alumnos (dni, nombre, apellido, fecha_nac, genero) values 
+("25733196z","salva","rodríguez","1992-03-09","masculino"),
+("25733191z","james","rodríguez","1992-03-09","masculino"),
+("25733193z","piojo","rodríguez","1992-03-09","masculino");
+
+insert into asignaturas values
+("1","matemáticas","daw","1"),
+("2","inglés","dam","2"),
+("3","lenguaje","asir","1");
+
+insert into notas (nota,profesor,id_asignaturas,id_alumno) values
+("9.99","Jon","1","25733196z"),
+("5.75","Francisco","2","25733191z"),
+("7.5","Javi","3","25733193z");
+
+select a.dni as DNI, a.nombre as ALIAS
+from alumnos as a inner join notas as n on a.dni = n.id_alumno
+where n.nota >= (select nota from notas order by nota desc limit 1)
+order by a.nombre asc;
+
+select cod
+from notas;
+
+
+
+

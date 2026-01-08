@@ -73,6 +73,6 @@ public class Ejercicio5 {
 
         System.out.println(escalar(A1, A2));
 
-
+sc.close();
     }
 }

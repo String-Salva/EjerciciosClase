@@ -47,6 +47,7 @@ public class Ejercicio4 {
         for (int i : array) {
             System.out.print(i + ", ");
         }
+        sc.close();
     }
 }
 
