@@ -5,56 +5,49 @@ genere un array de N posiciones con números primos. Entre esos números pertene
 al array, el programa deberá indicarnos cuál es el de mayor valor.
 import java.util.Scanner;
 */
+
 import java.util.Scanner;
 
+/*
+Escribe un programa en Java que solicite al usuario introducir un número entero N, y
+genere un array de N posiciones con números primos. Entre esos números pertenecientes
+al array, el programa deberá indicarnos cuál es el de mayor valor.
+ */
 public class Ejercicio4 {
-
-  public static boolean checkPrimo(int n) {
-    if (n < 2)
-      return false;
-    for (int i = 2; i < n; i++) {
-      if (n % i == 0)
-        return false;
-    }
-    return true;
-  }
-
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-
-    System.out.println("Introduce el tamaño del array");
-    int N = sc.nextInt();
-
-    int[] arrayPrimos = new int[N];
-
-    // Aquí declaro una variable para contabilizar los primos que son válidos para
-    // entrar en el array de N tamaño y meto también la variable inicial
-
-    int nPrimos = 0;
-    int numero = 0;
-    // Aquí hago un bucle para meter los primos
-
-    while (nPrimos < N) {
-      if (checkPrimo(numero)) {
-        arrayPrimos[nPrimos++] = numero;
-
-      }
-      numero++;
+    public static boolean checkPrimo(int numero) {
+        if (numero < 2) {
+            return false;
+        }
+        for (int i = 2; i < numero; i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    String resultado = "";
-    for (int i = 0; i < arrayPrimos.length; i++) {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-      if (i < arrayPrimos.length - 1) {
-        resultado += arrayPrimos[i] + ", ";
-      } else {
-        resultado += arrayPrimos[i];
-      }
+        System.out.println("Introduce un número entero N para generar un array de N posiciones con números primos");
+        int N = sc.nextInt();
 
+        int[] array = new int[N];
+
+
+        int contador = 0;
+        int numero = 2;
+
+        while (contador < N) {
+            if (checkPrimo(numero)) {
+                array[contador++] = numero;
+            }
+            numero++;
+        }
+        for (int i : array) {
+            System.out.print(i + ", ");
+        }
     }
-    resultado = "[" + resultado + "]";
-    System.out.println(resultado);
-    sc.close();
-  }
-
 }
+
+
