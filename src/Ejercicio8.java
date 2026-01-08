@@ -26,9 +26,9 @@ public class Ejercicio8 {
         int numero = 0;
         double[] notasEncimaMedia = new double[contadorEncimaMedia];
 
-        while (numero < contadorEncimaMedia) {
-            if (notas[acumulador] > media) {
-                notasEncimaMedia[acumulador] = notas[acumulador++];
+        while (numero < numeroAlumnos) {
+            if (notas[numero] > media) {
+                notasEncimaMedia[acumulador++] = notas[numero];
             }
             numero++;
         }
@@ -42,11 +42,11 @@ public class Ejercicio8 {
         }
 
 
-        a = "[" + a + "]";
+        a = "[ " + a + "]";
         System.out.println("Número de alumnos: " + numeroAlumnos);
         System.out.println("Media de notas " + media);
         System.out.println("Hay " + contadorEncimaMedia + " notas por encima de la media, son las siguientes:");
-        a = "[" + a + "]";
+
         System.out.println(a);
 
 
