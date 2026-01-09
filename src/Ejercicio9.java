@@ -26,7 +26,7 @@ public class Ejercicio9 {
         System.out.println(s);
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce la cantidad de valores que quieres de la sucesión de números de Fibonacci");
         int n = sc.nextInt();

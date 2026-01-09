@@ -59,6 +59,7 @@ public class Ejercicio5 {
         }
 
         // UTILIZO EL MÉTODO PARA HAYAR EL RESULTADO DE ESCALAR LOS DOS ARRAYS
+
         System.out.println("A1");
         for (int i : A1) {
             System.out.print(i + " ");
@@ -71,8 +72,23 @@ public class Ejercicio5 {
         System.out.println();
         System.out.println("Escalar:");
 
+
         System.out.println(escalar(A1, A2));
 
-sc.close();
+
+        System.out.println("A3");
+        for (int i : A3) {
+            System.out.print(i + " ");
+
+        }
+        System.out.println();
+        System.out.println("A4");
+        for (int i : A4) {
+            System.out.print(i + " ");
+
+        }
+        sc.close();
     }
+
+
 }
