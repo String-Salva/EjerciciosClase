@@ -18,26 +18,26 @@ public class Ejercicio10 {
 
         int[][] matriz = new int[7][7];
 
-
-
         for (int i = 0; i < matriz.length; i++) {
-            for (int j = 1; j <= matriz.length; j++) {
+            for (int j = 0; j <= i; j++) {
                 if (j == 0 || j == i) {
                     matriz[i][j] = 1;
-                }
-
-                if (i > 1 && j < i) {
+                } else {
                     matriz[i][j] = matriz[i - 1][j - 1] + matriz[i - 1][j];
                 }
             }
         }
         for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j <= i; i++) {
-                System.out.print(matriz[i][j]);
+
+            for (int s = 0; s < matriz.length - 1 - i; s++) {
+                System.out.print(" "); 
             }
+            for (int j = 0; j <= i; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
         }
 
     }
 
 }
-

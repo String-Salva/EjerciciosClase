@@ -28,17 +28,21 @@ public class Ejercicio9 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce la cantidad de valores que quieres de la sucesión de números de Fibonacci");
-        int n = sc.nextInt();
-        
-
+        int n = 0;
         try {
+            System.out.println("Introduce la cantidad de valores que quieres de la sucesión de números de Fibonacci");
+            n = sc.nextInt();
             fibonacci(n);
-        } catch (Error a) {
+        } catch (ArrayIndexOutOfBoundsException a) {
+            System.out.println("aaaa");
+            fibonacci(n + 1);
+        } catch (Exception a) {
+            System.out.println(a);
             System.out.println("El número a introducir debe ser mayor que 2 bro, introduce otro");
             n = sc.nextInt();
             fibonacci(n);
+        } finally {
+            sc.close();
         }
-        sc.close();
     }
 }
