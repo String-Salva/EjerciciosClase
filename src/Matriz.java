@@ -1,0 +1,46 @@
+/*
+Escribe una clase llamada Matriz, en el fichero Matriz.java, que implemente las estructuras
+de datos y métodos necesarios para manejar matrices cuadradas de números enteros, cuya
+capacidad puede definir el usuario. Debe incluir los siguientes métodos:
+• void asignarDatos(int[] vector)
+Rellena el contenido de la matriz por filas con los datos pasados desde un vector
+unidimensional.
+• void suma(Matriz m)
+Suma los valores de la propia clase con los valores de una matriz pasada como
+argumento.
+• void producto(Matriz m)
+Multiplica los valores de la propia clase con los valores de una matriz pasada como
+argumento.
+• void mostrar()
+Muestra el contenido de la matriz.
+Después, escribe un programa Java orientado a objetos, llamado MainMatriz.java, que
+realice las siguientes operaciones:
+• Crear dos matrices de tamaño 3x3.
+• Rellenar la primera con los datos: 3, 2, 1, 1, 2, 3, 2, 3, 1.
+• Rellenar la segunda con los datos: 1, 1, 2, 2, 1, 1, 1, 2, 1.
+• Mostrar el contenido de ambas matrices.
+• Multiplicar la primera por la segunda y mostrar el resultado.
+• Sumar la primera por la segunda y mostrar el resultado. */
+public class Matriz {
+  private int size;
+  int[][] matriz;
+
+  public Matriz(int size) {
+    this.size = size;
+    this.matriz = new int[size][size];
+  }
+  
+
+  public int getSize() {
+    return size;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
+  public void asignarDatos(int[] vector) {
+    if (vector.length == Math.pow((int)getSize(),2)) {
+      
+    }
+  }
+}
