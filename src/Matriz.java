@@ -45,7 +45,7 @@ public class Matriz {
 
   public void asignarDatos(int[] vector) {
     if (vector.length != this.getSize() * this.getSize()) {
-      System.out.println("Error en tamaño de vector");
+      throw new Error("Fallo con el tamaño del vector, si le das un tamaño N tienes que darle un tamaño N*N gilipollas");
     }
     int k = 0;
     for (int i = 0; i < this.getSize(); i++) {
