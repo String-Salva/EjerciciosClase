@@ -45,7 +45,7 @@ public class Matriz {
 
   public void asignarDatos(int[] vector) {
     if (vector.length != this.getSize() * this.getSize()) {
-      throw new Error("Fallo con el tamaño del vector, si le das un tamaño N tienes que darle un tamaño N*N gilipollas");
+      throw new Error("Fallo con el tamaño del vector, si le das un tamaño N tienes que darle un vector de tamaño N*N gilipollas");
     }
     int k = 0;
     for (int i = 0; i < this.getSize(); i++) {
@@ -87,7 +87,7 @@ public class Matriz {
     Matriz m = new Matriz(3);
     Matriz z = new Matriz(3);
 
-    int[] vector1 = { 3, 2, 1, 1, 2, 3, 2, 3, 1 };
+    int[] vector1 = { 3, 2, 1, 1, 2, 3, 2, 3, 1,2 };
     int[] vector2 = { 1, 1, 2, 2, 1, 1, 1, 2, 1 };
 
     m.asignarDatos(vector1);
