@@ -1,33 +1,40 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Ejercicio10",
-            "request": "launch",
-            "mainClass": "Ejercicio10",
-            "projectName": "EjerciciosProgramacion_f154c83f"
-        },
-        {
-            "type": "java",
-            "name": "Ejercicio6",
-            "request": "launch",
-            "mainClass": "Ejercicio6",
-            "projectName": "EjerciciosProgramacion_f154c83f"
-        },
-        {
-            "type": "java",
-            "name": "Ejercicio9",
-            "request": "launch",
-            "mainClass": "Ejercicio9",
-            "projectName": "EjerciciosProgramacion_f154c83f"
-        },
-        {
-            "type": "java",
-            "name": "Ejercicio9",
-            "request": "launch",
-            "mainClass": "Ejercicio9",
-            "projectName": "EjerciciosProgramacion"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Matriz",
+      "request": "launch",
+      "mainClass": "Matriz",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
+      "name": "Ejercicio10",
+      "request": "launch",
+      "mainClass": "Ejercicio10",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
+      "name": "Ejercicio6",
+      "request": "launch",
+      "mainClass": "Ejercicio6",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
+      "name": "Ejercicio9",
+      "request": "launch",
+      "mainClass": "Ejercicio9",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
+      "name": "Ejercicio9",
+      "request": "launch",
+      "mainClass": "Ejercicio9",
+      "projectName": "EjerciciosProgramacion"
+    }
+  ]
 }

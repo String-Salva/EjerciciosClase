@@ -23,13 +23,17 @@ realice las siguientes operaciones:
 • Sumar la primera por la segunda y mostrar el resultado. */
 public class Matriz {
   private int size;
-  int[][] matriz;
+  private int[][] matriz;
 
   public Matriz(int size) {
     this.size = size;
     this.matriz = new int[size][size];
+
   }
-  
+
+  public int[][] getMatriz() {
+    return this.matriz;
+  }
 
   public int getSize() {
     return size;
@@ -38,9 +42,59 @@ public class Matriz {
   public void setSize(int size) {
     this.size = size;
   }
+
   public void asignarDatos(int[] vector) {
-    if (vector.length == Math.pow((int)getSize(),2)) {
-      
+    if (vector.length != this.getSize() * this.getSize()) {
+      System.out.println("Error en tamaño de vector");
     }
+    int k = 0;
+    for (int i = 0; i < this.getSize(); i++) {
+      for (int j = 0; j < this.getSize(); j++) {
+        this.matriz[i][j] = vector[k++];
+      }
+    }
+
+  }
+
+  public void mostrarDatos() {
+    for (int i = 0; i < getSize(); i++) {
+      for (int j = 0; j < getSize(); j++) {
+        System.out.print(this.matriz[i][j] + " ");
+      }
+      System.out.println();
+    }
+  }
+
+  public void sumaMatriz(Matriz m) {
+    for (int i = 0; i < getSize(); i++) {
+      for (int j = 0; j < getSize(); j++) {
+        this.matriz[i][j] += m.getMatriz()[i][j];
+      }
+    }
+    this.mostrarDatos();
+  }
+
+  public void productoMatriz(Matriz m) {
+    for (int i = 0; i < getSize(); i++) {
+      for (int j = 0; j < getSize(); j++) {
+        this.matriz[i][j] *= m.getMatriz()[i][j];
+      }
+    }
+    this.mostrarDatos();
+  }
+
+  public static void main(String[] args) {
+    Matriz m = new Matriz(3);
+    Matriz z = new Matriz(3);
+
+    int[] vector1 = { 3, 2, 1, 1, 2, 3, 2, 3, 1 };
+    int[] vector2 = { 1, 1, 2, 2, 1, 1, 1, 2, 1 };
+
+    m.asignarDatos(vector1);
+    z.asignarDatos(vector2);
+
+    m.productoMatriz(z);
+    
+
   }
 }
