@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PracticaArrayCopy",
+      "request": "launch",
+      "mainClass": "PracticaArrayCopy",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
+      "name": "Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
       "name": "Matriz",
       "request": "launch",
       "mainClass": "Matriz",
