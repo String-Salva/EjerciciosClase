@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PracticaSet",
+      "request": "launch",
+      "mainClass": "PracticaSet",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
       "name": "PracticaArrayCopy",
       "request": "launch",
       "mainClass": "PracticaArrayCopy",
