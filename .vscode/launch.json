@@ -6,6 +6,20 @@
       "name": "TestUrna",
       "request": "launch",
       "mainClass": "ejercicio12.TestUrna",
+      "projectName": "EjerciciosClase_23c4e56"
+    },
+    {
+      "type": "java",
+      "name": "TestUrna",
+      "request": "launch",
+      "mainClass": "Ejercicio12.TestUrna",
+      "projectName": "EjerciciosClase_23c4e56"
+    },
+    {
+      "type": "java",
+      "name": "TestUrna",
+      "request": "launch",
+      "mainClass": "ejercicio12.TestUrna",
       "projectName": "EjerciciosProgramacion_f154c83f"
     },
     {
