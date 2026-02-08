@@ -3,10 +3,24 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Persona",
+      "name": "main",
       "request": "launch",
-      "mainClass": "unidad6.ejercicios.Persona",
-      "projectName": "EjerciciosProgramacion_f154c83f"
+      "mainClass": "ejercicio13.main",
+      "projectName": "EjerciciosClase_23c4e56"
+    },
+    {
+      "type": "java",
+      "name": "TestUrna",
+      "request": "launch",
+      "mainClass": "ejercicio12.TestUrna",
+      "projectName": "EjerciciosClase_23c4e56"
+    },
+    {
+      "type": "java",
+      "name": "TestUrna",
+      "request": "launch",
+      "mainClass": "Ejercicio12.TestUrna",
+      "projectName": "EjerciciosClase_23c4e56"
     },
     {
       "type": "java",
