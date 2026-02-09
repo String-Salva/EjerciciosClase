@@ -73,12 +73,23 @@ public class Garaje {
         return totalKm / (double) (this.capacidadMax - calcularPlazas());
     }
 
+    public String infoVehiculos() {
+        String s = "";
+        for (Vehiculo a : vehiculos) {
+            if (a != null) {
+                s += a.toString();
+            }
+        }
+        return s;
+    }
+
     public String mostrarInfo() {
         return "Este garaje dispone de una capacidad de: " + capacidadMax + " plazas\n" +
                 "Cambiamos las ruedas por el precio de: " + precio + " por rueda\n" +
                 "Quedan " + calcularPlazas() + " plazas disponibles" + "\n" +
-                (calcularPlazas() < vehiculos.length ? vehiculos.toString() : "");
-
-
+                (calcularPlazas() < vehiculos.length ? infoVehiculos() : "");
     }
+
+
 }
+

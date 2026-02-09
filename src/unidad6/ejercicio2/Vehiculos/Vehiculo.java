@@ -19,7 +19,7 @@ public class Vehiculo {
                 "Su marca es: " + marca + "\n" +
                 "Su cilindrada es: " + cilindrada + "\n" +
                 "Su kilometraje es: " + km + "kilómetros\n" +
-                "Y es de color: " + color;
+                "Y es de color: " + color+"\n";
 
     }
     public int getRuedas() {

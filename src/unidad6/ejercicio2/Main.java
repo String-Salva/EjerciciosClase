@@ -7,12 +7,12 @@ import unidad6.ejercicio2.Vehiculos.Motos;
 
 public class Main {
     public static void main(String[] args) {
-        Garaje mercedes = new Garaje(10, 10.0);
+        Garaje mercedes = new Garaje(5, 10.0);
 
-        Coches c1 = new Coches(4, "Clase C", 4, 3.200, 88700.5, true, Colores.BLANCO);
-        Coches c2 = new Coches(4, "Clase C", 4, 3.200, 882700.9, true, Colores.AZUL);
-        Coches c3 = new Coches(4, "Clase C", 4, 3.200, 12000.12, true, Colores.NEGRO);
-        Coches c4 = new Coches(4, "Clase C", 4, 3.200, 88999.13, true, Colores.ROJO);
+        Coches c1 = new Coches(4, "Clase C", 4, 3.100, 88700.5, true, Colores.BLANCO);
+        Coches c2 = new Coches(4, "Clase C", 4, 9.200, 882700.9, false, Colores.AZUL);
+        Coches c3 = new Coches(4, "Clase C", 4, 3.20, 12000.12, true, Colores.NEGRO);
+        Coches c4 = new Coches(4, "Clase C", 4, 7.200, 88999.13, false, Colores.ROJO);
         Motos m1 = new Motos(2, "Yamaha", 1.200, 43500.99, Colores.NEGRO);
 
         mercedes.introducir(c1);
@@ -20,9 +20,9 @@ public class Main {
         mercedes.introducir(c3);
         mercedes.introducir(c4);
         mercedes.introducir(m1);
-        System.out.println(c1.toString());
-        System.out.println(m1.toString());
-        System.out.println(mercedes.kmMedio());
+        //
+
+        System.out.println(mercedes.mostrarInfo());
 
 
 

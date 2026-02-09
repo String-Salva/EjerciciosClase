@@ -9,8 +9,8 @@ public class Motos extends Vehiculo {
         return "Este vehículo  es una moto y dispone de " + numRuedas + " ruedas\n" +
                 "Su marca es: " + marca + "\n" +
                 "Su cilindrada es: " + cilindrada + "\n" +
-                "Su kilometraje es: " + km + "kilómetros\n" +
-                "Y es de color: " + color;
+                "Su kilometraje es: " + km + " kilómetros\n" +
+                "Y es de color: " + color+"\n";
 
     }
 
