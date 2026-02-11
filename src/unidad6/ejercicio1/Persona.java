@@ -1,14 +1,14 @@
 package unidad6.ejercicio1;
 
 public class Persona {
-  int idPersona;
-  String nombre;
-  static int contadorPersonas = 0;
+  protected int idPersona;
+  protected String nombre;
+  public static int contadorPersonas = 0;
 
   public Persona(int idPersona, String nombre) {
     this.idPersona = idPersona;
     this.nombre = nombre;
-    contadorPersonas++;
+    Persona.contadorPersonas++;
   }
 
   public String getNombre() {
@@ -19,7 +19,7 @@ public class Persona {
   }
   
   public int getContadorPersonas() {
-    return contadorPersonas;
+    return Persona.contadorPersonas;
   }
 
   public String toString() {

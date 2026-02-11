@@ -31,7 +31,7 @@ public class Math2 {
     }
 
     public static double mediaAritmetica(double[] n) {
-        return sumatorio(n) / n.length;
+        return Math2.sumatorio(n) / (double) n.length;
     }
 
     public static double mediaGeometrica(double[] n) {
@@ -39,6 +39,6 @@ public class Math2 {
         for (int i = 0; i < n.length; i++) {
             interiorRaiz *= n[i];
         }
-        return Math.pow(interiorRaiz, 1.0 / n.length);
+        return Math.pow(interiorRaiz, 1.0 / (double)n.length);
     }
 }
