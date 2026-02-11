@@ -1,6 +1,6 @@
 package unidad6.ejercicio3;
 
-public class Math2 {
+public final class Math2 {
 
     public static double maxN(double[] n) {
         double maximo = n[0];
