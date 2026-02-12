@@ -13,7 +13,9 @@ public class Producto {
         this.preciosHistoricos = preciosHistoricos;
         Producto.totalProductos++;
     }
-    public Producto() {}
+
+    public Producto() {
+    }
 
     // Getters and Setters
     public double[] getPreciosHistoricos() {
@@ -61,20 +63,16 @@ public class Producto {
 
     }
 
-    public void mostrarDetalles() {
-        System.out.println("Nombre: " + this.getNombre() + "\n" +
+    public String mostrarDetalles() {
+        String s = "Nombre: " + this.getNombre() + "\n" +
                 "Precio Actual: " + this.obtenerPrecioActual() + "\n" +
-                "Historial de precios del producto: " + this.mostrarHistorico());
+                "Historial de precios del producto: " + this.mostrarHistorico() + "\n";
+        return s;
     }
 
     public static int obtenerTotalProductos() {
         return Producto.totalProductos;
     }
 
-    public String MostrarDetalles() {
-        String s = "";
-        s = " El nombre del producto es: " + this.obtenerPrecioActual() + "\n" +
-                "Historial de precios de este producto: " + this.mostrarHistorico();
-        return s;
-    }
+
 }

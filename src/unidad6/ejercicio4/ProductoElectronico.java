@@ -6,6 +6,7 @@ public class ProductoElectronico extends Producto {
     public ProductoElectronico(String nombre, double[] preciosHistoricos,int garantia) {
         super(nombre,preciosHistoricos);
         this.garantia = garantia;
+        Producto.totalProductos++;
     }
     public ProductoElectronico(){}
 
@@ -15,6 +16,6 @@ public class ProductoElectronico extends Producto {
 
 
     public String mostrarDetalles() {
-        return super.mostrarDetalles() + " Meses de garantía: " + this.getGarantia());
+        return super.mostrarDetalles() + " Meses de garantía: " + this.getGarantia();
     }
 }
