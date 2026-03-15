@@ -25,64 +25,73 @@ public class ConversorLongitudes {
     }
 
 
-    public static double convertir(double cantidad, Unidad udLongitudInicial, Unidad udLongitudFinal) {
-        double metros = 1;
-        switch (udLongitudInicial) {
-            case Unidad.PULGADA:
-                metros = cantidad * pulgadaAmetro;
-                break;
-            case Unidad.KILOMETRO:
-                metros = cantidad * 1000;
-                break;
-            case Unidad.PIE:
-                metros = cantidad * pieAMetro;
-                break;
-            case Unidad.YARDA:
-                metros = cantidad * yardaAMetro;
-                break;
-            case Unidad.MILLA:
-                metros = millasAmetros(cantidad);
-                break;
-            case Unidad.NAUTICA:
-                metros = cantidad * nauticaAMetro;
-                break;
-            case Unidad.METRO:
-                metros = cantidad;
-                break;
-            case Unidad.MILIMETRO:
-                metros = cantidad / 1000;
-                break;
+    public static double convertir(double cantidad, Unidad udLongitudInicial, Unidad udLongitudFinal) throws IllegalArgumentException {
+        if (cantidad <= 0) {
+            throw new IllegalArgumentException();
         }
-        double resultado = 1;
-
-        switch (udLongitudFinal) {
-            case Unidad.KILOMETRO:
-                resultado = metros * 1000;
-                break;
-            case Unidad.METRO:
-                resultado = metros;
-                break;
-            case Unidad.MILIMETRO:
-                resultado = metros * 1000;
-                break;
-            case Unidad.MILLA:
-                resultado = kmAMillas(metros) / 1000;
-                break;
-            case Unidad.NAUTICA:
-                resultado = metros * (1 / nauticaAMetro);
-                break;
-            case Unidad.PIE:
-                resultado = metros * (1 / pieAMetro);
-                break;
-            case Unidad.PULGADA:
-                resultado = metros * (1 / pulgadaAmetro);
-                break;
-            case Unidad.YARDA:
-                resultado = metros * (1 / yardaAMetro);
-                break;
-
+        if (udLongitudInicial == null || udLongitudFinal == null) {
+            throw new IllegalArgumentException();
         }
 
-        return resultado;
+
+            double metros = 1;
+            switch (udLongitudInicial) {
+                case Unidad.PULGADA:
+                    metros = cantidad * pulgadaAmetro;
+                    break;
+                case Unidad.KILOMETRO:
+                    metros = cantidad * 1000;
+                    break;
+                case Unidad.PIE:
+                    metros = cantidad * pieAMetro;
+                    break;
+                case Unidad.YARDA:
+                    metros = cantidad * yardaAMetro;
+                    break;
+                case Unidad.MILLA:
+                    metros = millasAmetros(cantidad);
+                    break;
+                case Unidad.NAUTICA:
+                    metros = cantidad * nauticaAMetro;
+                    break;
+                case Unidad.METRO:
+                    metros = cantidad;
+                    break;
+                case Unidad.MILIMETRO:
+                    metros = cantidad / 1000;
+                    break;
+            }
+            double resultado = 1;
+
+            switch (udLongitudFinal) {
+                case Unidad.KILOMETRO:
+                    resultado = metros * 1000;
+                    break;
+                case Unidad.METRO:
+                    resultado = metros;
+                    break;
+                case Unidad.MILIMETRO:
+                    resultado = metros * 1000;
+                    break;
+                case Unidad.MILLA:
+                    resultado = kmAMillas(metros) / 1000;
+                    break;
+                case Unidad.NAUTICA:
+                    resultado = metros * (1 / nauticaAMetro);
+                    break;
+                case Unidad.PIE:
+                    resultado = metros * (1 / pieAMetro);
+                    break;
+                case Unidad.PULGADA:
+                    resultado = metros * (1 / pulgadaAmetro);
+                    break;
+                case Unidad.YARDA:
+                    resultado = metros * (1 / yardaAMetro);
+                    break;
+
+            }
+
+            return resultado;
+
     }
 }
