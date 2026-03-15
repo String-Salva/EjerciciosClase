@@ -21,19 +21,34 @@ public class Ejercicio2 {
 
 
         if (!isBinary) {
-            FileReader fr = null;
+
             try {
                 System.out.println("Archivo identificado como TEXTO\nIniciando copia de seguridad...");
-                fr = new FileReader(ruta);
+
+                //Voy a calcular el tamaño total de caracteres primero para utilizar porcentajes
+                FileReader fr1 = new FileReader(ruta);
+                BufferedReader br1 = new BufferedReader(fr1);
+                int total = 0;
+                String s;
+                while ((s = br1.readLine()) != null) {
+                    total += s.length();
+                }
+                fr1.close();
+                br1.close();
+
+
+
+                FileReader fr = new FileReader(ruta);
                 BufferedReader br = new BufferedReader(fr);
                 FileWriter fw = new FileWriter(nuevoArchivo);
                 BufferedWriter bw = new BufferedWriter(fw);
                 String linea;
-                long carga = 0;
+                int carga = 0;
                 while ((linea = br.readLine()) != null) {
+
                     bw.write(linea);
-                    carga += nuevoArchivo.length();
-                    System.out.println(carga / 1024 + " kilobytes copiados...");
+                    carga += linea.length();
+                    System.out.println((double)carga/total*100 + " %...");
                     bw.newLine();
                 }
                 bw.close();
