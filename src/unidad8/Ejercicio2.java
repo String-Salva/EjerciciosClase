@@ -37,7 +37,6 @@ public class Ejercicio2 {
                 br1.close();
 
 
-
                 FileReader fr = new FileReader(ruta);
                 BufferedReader br = new BufferedReader(fr);
                 FileWriter fw = new FileWriter(nuevoArchivo);
@@ -48,7 +47,7 @@ public class Ejercicio2 {
 
                     bw.write(linea);
                     carga += linea.length();
-                    System.out.println((double)carga/total*100 + " %...");
+                    System.out.println((double) carga / total * 100 + " %...");
                     bw.newLine();
                 }
                 bw.close();
@@ -63,17 +62,32 @@ public class Ejercicio2 {
         } else {
             System.out.println("Archivo identificado como BINARIO\nIniciando copia de seguridad...");
 
+            int tamanioBinario = 0;
+
+            try (FileInputStream fis = new FileInputStream(ruta);
+                 BufferedInputStream bis = new BufferedInputStream(fis);
+            ) {
+
+                int c;
+                while ((c = bis.read()) != -1) {
+                    tamanioBinario += c;
+                }
+
+            } catch (IOException a) {
+                System.out.println("Error en la contabilización de caracteres binarios");
+            }
+
             try {
                 FileInputStream fis = new FileInputStream(ruta);
                 BufferedInputStream bis = new BufferedInputStream(fis);
                 FileOutputStream fos = new FileOutputStream(nuevoArchivo);
                 BufferedOutputStream bos = new BufferedOutputStream(fos);
-                long carga = 0;
                 int dato;
+                int tamanioActual = 0;
                 while ((dato = bis.read()) != -1) {
                     bos.write(dato);
-                    carga += nuevoArchivo.length();
-                    System.out.println((double)(carga / 1024) + " kilobytes copiados...");
+                    ++tamanioActual;
+                    System.out.println("Copiando... " + (tamanioActual*100 / tamanioBinario) + " %...");
 
                 }
                 bos.close();

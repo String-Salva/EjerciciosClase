@@ -50,11 +50,11 @@ public class Ejercicio3 {
             System.out.println("Problemas de escritura");
         }
 
-        try {
-            FileReader fr = new FileReader(ruta2);
-            BufferedReader br = new BufferedReader(fr);
-            FileWriter fw = new FileWriter(fusion, true);
-            BufferedWriter bw = new BufferedWriter(fw);
+        try (FileReader fr = new FileReader(ruta2);
+             BufferedReader br = new BufferedReader(fr);
+             FileWriter fw = new FileWriter(fusion, true);
+             BufferedWriter bw = new BufferedWriter(fw);) {
+
 
             String linea;
             while ((linea = br.readLine()) != null) {
