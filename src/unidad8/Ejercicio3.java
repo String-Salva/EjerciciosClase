@@ -62,7 +62,7 @@ public class Ejercicio3 {
                 bw.newLine();
             }
             br.close();
-            bw.close();
+
 
         } catch (FileNotFoundException e) {
             System.out.println("No existe dicho archivo");

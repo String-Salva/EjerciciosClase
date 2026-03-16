@@ -15,7 +15,7 @@ public class Ejercicio2 {
             isBinary = true;
         }
         String nombreArchivo = ruta.substring(ruta.lastIndexOf("/") + 1, ruta.lastIndexOf("."));
-        String nombreCarpeta = ruta.substring(0, ruta.lastIndexOf("/"));
+        String nombreCarpeta = ruta.substring(0, ruta.lastIndexOf("/") + 1);
 
         File nuevoArchivo = new File(nombreCarpeta + nombreArchivo + ".bak");
 
@@ -70,7 +70,7 @@ public class Ejercicio2 {
 
                 int c;
                 while ((c = bis.read()) != -1) {
-                    tamanioBinario += c;
+                    tamanioBinario ++;
                 }
 
             } catch (IOException a) {
@@ -86,10 +86,11 @@ public class Ejercicio2 {
                 int tamanioActual = 0;
                 while ((dato = bis.read()) != -1) {
                     bos.write(dato);
-                    ++tamanioActual;
-                    System.out.println("Copiando... " + (tamanioActual*100 / tamanioBinario) + " %...");
+                    tamanioActual++;
+                    System.out.println("Copiando... " + ((tamanioActual*100) / tamanioBinario) + " %");
 
                 }
+
                 bos.close();
                 fis.close();
                 System.out.println("Finalizada la copia de seguridad con éxito: " + nombreCarpeta + nombreArchivo + ".bak");
