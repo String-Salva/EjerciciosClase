@@ -47,7 +47,7 @@ public class Ejercicio2 {
 
                     bw.write(linea);
                     carga += linea.length();
-                    System.out.println((double) carga / total * 100 + " %...");
+                    System.out.println(( carga / total * 100 + " %..."));
                     bw.newLine();
                 }
                 bw.close();
