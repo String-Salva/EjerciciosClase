@@ -14,6 +14,7 @@ public class TelefonoFijo extends Telefono {
         this.modelo = numero;
     }
 
+
     @Override
     public void llamar(String OtroNumero) {
         System.out.println("Llamando al número " + OtroNumero + " ...");

@@ -1,6 +1,6 @@
 package unidad9.ejercicio1;
 
-public class MovilConCamaraYRadio extends MovilConCamara {
+public class MovilConCamaraYRadio extends MovilConCamara implements Radioable,Camareable{
     public MovilConCamaraYRadio(String resolucion, String numero, String operador) {
         super(numero, operador, resolucion);
     }

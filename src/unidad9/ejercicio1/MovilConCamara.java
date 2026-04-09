@@ -1,6 +1,6 @@
 package unidad9.ejercicio1;
 
-public class MovilConCamara extends TelefonoMovil {
+public class MovilConCamara extends TelefonoMovil implements Camareable {
     String resolucion;
 
     public MovilConCamara() {

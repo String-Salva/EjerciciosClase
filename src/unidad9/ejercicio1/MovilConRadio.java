@@ -1,6 +1,6 @@
 package unidad9.ejercicio1;
 
-public class MovilConRadio extends TelefonoMovil {
+public class MovilConRadio extends TelefonoMovil implements Radioable {
     String sintonia;
 
     public MovilConRadio() {
@@ -17,5 +17,8 @@ public class MovilConRadio extends TelefonoMovil {
     }
 
 
+    @Override
+    public void escuchar(String sintonia) {
 
+    }
 }
