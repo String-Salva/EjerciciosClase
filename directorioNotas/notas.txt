@@ -1,0 +1,24 @@
+salva   ->   1.0
+antonio   ->   2.0
+espe   ->   2.0
+ar   ->   2.0
+sdf   ->   4.0
+asda   ->   3.0
+rafael   ->   2.0
+rafita   ->   2.0
+miguel   ->   4.0
+fernando   ->   5.0
+arturo   ->   10.0
+camila   ->   10.0
+omar   ->   4.0
+pablo   ->   8.0
+fran   ->   6.0
+dani   ->   9.0
+norah   ->   7.0
+franciis   ->   0.0
+angela   ->   1.0
+jose carlos   ->   1.0
+antiuan   ->   1.0
+asdadasd   ->   1.0
+rafittta   ->   1.0
+martha   ->   3.0
