@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="swing.ej2.Calificaciones">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="457" height="456"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="782e" class="javax.swing.JLabel">
+        <constraints border-constraint="North"/>
+        <properties>
+          <text value="Gestión de calificaciones"/>
+        </properties>
+      </component>
+      <grid id="28dd8" binding="panelBotones" layout-manager="GridBagLayout">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="8b55e" class="javax.swing.JButton" binding="guardarNotasButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="500.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <horizontalTextPosition value="0"/>
+              <text value="Guardar notas"/>
+            </properties>
+          </component>
+          <component id="70b1d" class="javax.swing.JButton" binding="cargarNotasButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="20.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Cargar notas"/>
+            </properties>
+          </component>
+          <component id="54bfa" class="javax.swing.JButton" binding="agregarNotaButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="4"/>
+              <text value="Agregar nota"/>
+              <verticalAlignment value="0"/>
+              <verticalTextPosition value="0"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="38cc3" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="b3db7" class="javax.swing.JLabel" binding="nombreLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Nombre del estudiante:"/>
+            </properties>
+          </component>
+          <component id="de98a" class="javax.swing.JTextField" binding="campoNombre">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="3dc06" class="javax.swing.JLabel" binding="calificacionLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Calificación:"/>
+            </properties>
+          </component>
+          <component id="e02ce" class="javax.swing.JTextField" binding="campoNota">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="ba511" class="javax.swing.JLabel" binding="listadoLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Listado de notas:"/>
+            </properties>
+          </component>
+          <component id="984c5" class="javax.swing.JTextField" binding="campoListadoNotas">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

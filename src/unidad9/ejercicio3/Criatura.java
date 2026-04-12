@@ -32,9 +32,9 @@ public abstract class Criatura {
 
     public void descansar(){}
 
-    public String toString() {
+    /*public String toString() {
         String s = "Nombre de la criatura: " + nombre
 
     }
-
+*/
 }
