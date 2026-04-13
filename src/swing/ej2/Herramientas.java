@@ -71,6 +71,7 @@ public class Herramientas {
 
             mostrarNotas(nombres, notas, textArea);
         }
+        mostrarNotas(nombres, notas, textArea);
     }
 
 
