@@ -120,8 +120,9 @@ public class BlocNotas extends JFrame {
 
             try {
 
-                // Creo un BufferedReader para leer el archivo
-                BufferedReader br = new BufferedReader(new FileReader(archivo));
+                // Creo un BufferedReader y un FileReader para leer el archivo
+                FileReader fr = new FileReader(archivo);
+                BufferedReader br = new BufferedReader(fr);
 
                 // Limpio primero el JTextArea
                 textArea.setText("");
@@ -134,6 +135,7 @@ public class BlocNotas extends JFrame {
                 }
 
                 br.close();
+                fr.close();
 
             } catch (IOException e) {
 
@@ -160,13 +162,15 @@ public class BlocNotas extends JFrame {
 
             try {
 
-                // Creo un BufferedWriter para escribir en el archivo
-                BufferedWriter bw = new BufferedWriter(new FileWriter(archivo));
+                // Creo un BufferedWriter y un FileWriter para escribir en el archivo
+                FileWriter fw = new FileWriter(archivo);
+                BufferedWriter bw = new BufferedWriter(fw);
 
                 // Escribo todo el contenido del JTextArea en el archivo
                 bw.write(textArea.getText());
 
                 bw.close();
+                fw.close();
 
             } catch (IOException e) {
 
