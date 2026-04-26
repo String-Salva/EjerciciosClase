@@ -11,10 +11,11 @@ public class Main {
         System.out.println(
                 "Venga vamos a hacer la lista de tareas, cuando quieras finalizar solamente dime \"finalizar\"");
         while (continuar == true) {
+            while (!userOption.toLowerCase().equals("finalizar")) {
             System.out.println(
                     "Dime si quieres introducir una tarea diciendo \"introducir\", borrar una tarea diciendo \"borrar\" o si quieres mostrar las que llevamos diciendo \"mostrar\"");
             userOption = sc.nextLine().trim().toLowerCase();
-            while (userOption.toLowerCase() != "finalizar")
+            
 
                 switch (userOption) {
                     case "introducir":
@@ -44,13 +45,14 @@ public class Main {
                     default:
                         System.out.println("Introduce una de las tres opciones que te he dado o no hago nada");
                 }
-                System.out.println("Quieres hacer alguna otra operación? Si quieres finalizar, dime finalizar ahora, si quieres seguir dime cualquier otra cosa");
+                System.out.println(
+                        "Quieres hacer alguna otra operación? Si quieres finalizar, dime finalizar ahora, si quieres seguir dime cualquier otra cosa");
                 String continuacion = sc.nextLine();
                 if (continuacion.toLowerCase().equals("finalizar")) {
                     continuar = false;
                 }
+            }
         }
-
     }
 
 }
