@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LocalDatePractice",
+      "request": "launch",
+      "mainClass": "localdate.LocalDatePractice",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "unidad11.ej1.Main",
