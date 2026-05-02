@@ -35,6 +35,13 @@ public class Coche {
         this.precio = precio;
     }
 
+    @Override
+    public String toString() {
+        return "Coche [Marca=" + getMarca() + ", Modelo=" + getModelo() + ", Precio=" + getPrecio()
+                + "]";
+    }
+    
+
 
   
 }

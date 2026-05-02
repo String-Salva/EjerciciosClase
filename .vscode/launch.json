@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "comparatorYcomparable.Main",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
+      "name": "Practica",
+      "request": "launch",
+      "mainClass": "programacionfuncional.Practica",
+      "projectName": "EjerciciosProgramacion_f154c83f"
+    },
+    {
+      "type": "java",
       "name": "LocalDatePractice",
       "request": "launch",
       "mainClass": "localdate.LocalDatePractice",

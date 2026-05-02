@@ -1,0 +1,36 @@
+package comparatorYcomparable;
+
+public class Coche {
+
+    private String marca;
+    private String modelo;
+    private double precio;
+
+    public Coche(String marca, String modelo, double precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    //@Override
+    //public int compareTo(Coche otro) {
+      //  return Double.compare(this.getPrecio(),otro.getPrecio());
+    //}
+
+    @Override
+    public String toString() {
+        return marca + " " + modelo + " - " + precio;
+    }
+}
